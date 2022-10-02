@@ -1,3 +1,6 @@
+/*
+    Pran Somboonprasit
+*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
@@ -9,11 +12,9 @@ void CalculateAddMatrix(int Row,int Col);
 void CalculateMultiMatrix(int Row,int Col);
 void CalculateSubtractMatrix(int Row,int Col);
 void printMatrix(int Row,int Col,int math[100][100]);
+int i,j,k,l = 1,m = 1;
 int main(){
     char menu,options;
-    int m = 1;
-    int l = 1;
-    int i,j;
     system("color 2");
     printf(" Select a function 1.Matrix 1x1 2.Matrix 2x2 3.Matrix 3x3 4.Matrix 4x4\n");
     printf("\t\t 5.Choose the matrix itself");
@@ -60,7 +61,6 @@ int main(){
     }
 }
 void matrixCalculation(int Row,int Col,char options){
-    int i,j,l = 1,m = 1;
     system("cls");
     printf("\tMatrix A\n");
     for(i=0;i<Row;i++){
@@ -99,7 +99,6 @@ void matrixCalculation(int Row,int Col,char options){
     }
 }
 void CalculateAddMatrix(int Row,int Col){
-    int i,j;
     for(i=0;i<Row;i++){
         for(j=0;j<Col;j++){
             result[i][j] = matrixA[i][j] + matrixB[i][j];
@@ -109,7 +108,6 @@ void CalculateAddMatrix(int Row,int Col){
     printMatrix(Row,Col,result);
 }
 void CalculateSubtractMatrix(int Row,int Col){
-    int i,j;
     for(i=0;i<Row;i++){
         for(j=0;j<Col;j++){
             result[i][j] = matrixA[i][j] - matrixB[i][j];
@@ -119,7 +117,6 @@ void CalculateSubtractMatrix(int Row,int Col){
     printMatrix(Row,Col,result);
 }
 void CalculateMultiMatrix(int Row,int Col){
-    int i,j,k;
     int splitMatrix;
     splitMatrix = (Row > Col) ? Row : Col;
     for(i=0;i<Row;i++){
@@ -134,7 +131,6 @@ void CalculateMultiMatrix(int Row,int Col){
     printMatrix(Row,Col,result);
 }
 void printMatrix(int Row,int Col,int math[100][100]){
-    int i,j;
     for(i=0;i<Row;i++)for(i=0;i<Row;i++){
         for(j=0;j<Col;j++)for(j=0;j<Col;j++){
             if(j>0){
